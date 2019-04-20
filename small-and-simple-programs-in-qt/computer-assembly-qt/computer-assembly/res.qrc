@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Home-Server-icon.png</file>
+        <file>data.csv</file>
+        <file>info.html</file>
+    </qresource>
+</RCC>

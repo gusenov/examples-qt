@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>810</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Сборка ПК</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pushButtonBuild">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>646</y>
+      <width>780</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Собрать готовое решение персонального компьютера и вывести цену</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxVideoCard">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>390</width>
+      <height>168</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>ВИДЕОКАРТА</string>
+    </property>
+    <widget class="QComboBox" name="comboBoxVideoCardChoice">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>230</width>
+       <height>42</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEditVideoCardSpecifications">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>72</y>
+       <width>370</width>
+       <height>86</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBoxVideoCardQuantityValue">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>40</y>
+       <width>50</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelVideoCardQuantityTitle">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>20</y>
+       <width>50</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Кол-во:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelVideoCardPriceTitle">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>20</y>
+       <width>70</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Цена:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelVideoCardPriceValue">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>43</y>
+       <width>70</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0 ₽</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxCPU">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>10</y>
+      <width>390</width>
+      <height>168</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>ПРОЦЕССОР</string>
+    </property>
+    <widget class="QComboBox" name="comboBoxCPUChoice">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>290</width>
+       <height>42</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEditCPUSpecifications">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>72</y>
+       <width>370</width>
+       <height>86</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelCPUPriceTitle">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>20</y>
+       <width>70</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Цена:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelCPUPriceValue">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>43</y>
+       <width>70</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0 ₽</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxMotherboard">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>188</y>
+      <width>390</width>
+      <height>168</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>МАТЕРИНСКАЯ ПЛАТА</string>
+    </property>
+    <widget class="QComboBox" name="comboBoxMotherboardChoice">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>290</width>
+       <height>42</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEditMotherboardSpecifications">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>72</y>
+       <width>370</width>
+       <height>86</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelMotherboardPriceTitle">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>20</y>
+       <width>70</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Цена:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelMotherboardPriceValue">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>43</y>
+       <width>70</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0 ₽</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxPowerSupply">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>188</y>
+      <width>390</width>
+      <height>168</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>БЛОК ПИТАНИЯ</string>
+    </property>
+    <widget class="QComboBox" name="comboBoxPowerSupplyChoice">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>290</width>
+       <height>42</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEditPowerSupplySpecifications">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>72</y>
+       <width>370</width>
+       <height>86</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelPowerSupplyPriceTitle">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>20</y>
+       <width>70</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Цена:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelPowerSupplyPriceValue">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>43</y>
+       <width>70</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0 ₽</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxHDD">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>366</y>
+      <width>390</width>
+      <height>168</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>ЖЕСТКИЙ ДИСК</string>
+    </property>
+    <widget class="QComboBox" name="comboBoxHDDChoice">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>230</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEditHDDSpecifications">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>72</y>
+       <width>370</width>
+       <height>86</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBoxHDDQuantityValue">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>40</y>
+       <width>50</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelHDDQuantityTitle">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>20</y>
+       <width>50</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Кол-во:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelHDDPriceTitle">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>20</y>
+       <width>70</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Цена:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelHDDPriceValue">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>43</y>
+       <width>70</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0 ₽</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxRAM">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>366</y>
+      <width>390</width>
+      <height>168</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>ОПЕРАТИВНАЯ ПАМЯТЬ</string>
+    </property>
+    <widget class="QComboBox" name="comboBoxRAMChoice">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>230</width>
+       <height>42</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEditRAMSpecifications">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>72</y>
+       <width>370</width>
+       <height>86</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBoxRAMQuantityValue">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>40</y>
+       <width>50</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelRAMQuantityTitle">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>20</y>
+       <width>50</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Кол-во:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelRAMPriceTitle">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>20</y>
+       <width>70</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Цена:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelRAMPriceValue">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>43</y>
+       <width>70</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>0 ₽</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEditCompatibilityInfo">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>544</y>
+      <width>790</width>
+      <height>92</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>810</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Справка</string>
+    </property>
+    <addaction name="actionInfo"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>О программе Сборка ПК…</string>
+   </property>
+  </action>
+  <action name="actionInfo">
+   <property name="text">
+    <string>Информация о проекте</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

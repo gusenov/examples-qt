@@ -1,0 +1,36 @@
+Тип устройства;Идентификатор;Модель;Цена;Характеристики;Совместимость
+1;1;ASUS GeForce GTX 1060;15000;Характеристики видеокарты ASUS GeForce GTX 1060;6,-7,8,9,-10,-11
+1;2;MSI GeForce RTX 2060;28500;Характеристики видеокарты MSI GeForce RTX 2060;-6,-7,8,9,-10,11
+1;3;NVIDIA GeForce RTX 2060 Founders Edition;31990;Характеристики видеокарты NVIDIA GeForce RTX 2060 Founders Edition;-6,7,-8,-9,10,-11
+1;4;NVIDIA GeForce 660Ti;9600;Характеристики видеокарты NVIDIA GeForce 660Ti;-6,-7,8,9,-10,11
+1;5;NVIDIA GeForce 960;14500;Характеристики видеокарты NVIDIA GeForce 960;6,7,-8,9,10,11
+2;6;ASUS ROG STRIX B360-I GAMING;8900;Характеристики материнской платы ASUS ROG STRIX B360-I GAMING;
+2;7;MSI B360I GAMING PRO AC;9700;Характеристики материнской платы MSI B360I GAMING PRO AC;
+2;8;MSI Z390 MAG TOMAHAWK;13500;Характеристики материнской платы MSI Z390 MAG TOMAHAWK;
+2;9;ASUS H110S2;6600;Характеристики материнской платы ASUS H110S2;
+2;10;AsRock Z370 Pro4;7900;Характеристики материнской платы AsRock Z370 Pro4;
+2;11;GIGABYTE GA-AB350M-HD3;6600;Характеристики материнской платы GIGABYTE GA-AB350M-HD3;
+3;12;8GB HyperX FURY DDR4-2666;2500;Характеристики оперативной памяти 8GB HyperX FURY DDR4-2666;-6,-7,8,9,10,11
+3;13;8GB HyperX Predator RGB DDR4-3200;4400;Характеристики оперативной памяти 8GB HyperX Predator RGB DDR4-3200;-6,7,-8,-9,-10,11
+3;14;16GB HyperX Predator RGB DDR4-3200;9700;Характеристики оперативной памяти 16GB HyperX Predator RGB DDR4-3200;6,-7,-8,-9,-10,-11
+3;15;AMD Radeon R7 Performance Series CL16 4 ГБ;2000;Характеристики оперативной памяти AMD Radeon R7 Performance Series CL16 4 ГБ;6,7,8,-9,-10,11
+3;16;Ballistix Elite [BLE2C16G4D30AEEA] 32 ГБ;35000;Характеристики оперативной памяти Ballistix Elite [BLE2C16G4D30AEEA] 32 ГБ;-6,-7,-8,9,10,-11
+3;17;Goodram Iridium [IR-R2400D464L15S/8G] 8 ГБ;4200;Характеристики оперативной памяти Goodram Iridium [IR-R2400D464L15S/8G] 8 ГБ;-6,7,-8,9,-10,11
+4;18;Intel® Core™ i3-8100;10900;Характеристики процессора Intel® Core™ i3-8100;10900;-6,7,8,9,10,-11
+4;19;Intel® Core™ i5-8400;15950;Характеристики процессора Intel® Core™ i5-8400;6,-7,8,9,10,11
+4;20;AMD Ryzen 5 1500X OEM;9300;Характеристики процессора AMD Ryzen 5 1500X OEM;-6,7,-8,-9,-10,-11
+4;21;Intel Core i9-9960X BOX;151900;Характеристики процессора Intel Core i9-9960X BOX;-6,-7,-8,9,10,-11
+4;22;Intel Xeon E3-1225 v6 OEM;18000;Характеристики процессора Intel Xeon E3-1225 v6 OEM;-6,7,8,9,10,-11
+5;23;1TB Seagate BarraCuda;3300;Характеристики жесткого диска 1TB Seagate BarraCuda;
+5;24;1TB Seagate IronWolf;4000;Характеристики жесткого диска 1TB Seagate IronWolf;
+5;25;2TB Seagate BarraCuda;5000;Характеристики жесткого диска 2TB Seagate BarraCuda;
+5;26;2TB Seagate BarraCuda Pro;9900;Характеристики жесткого диска 2TB Seagate BarraCuda Pro;
+5;27;8TB Seagate IronWolf;14000;Характеристики жесткого диска 8TB Seagate IronWolf;
+5;28;8TB Seagate BarraCuda Pro;21700;Характеристики жесткого диска 8TB Seagate BarraCuda Pro;
+5;29;14TB Seagate IronWolf Pro;40900;Характеристики жесткого диска 14TB Seagate IronWolf Pro;
+6;30;Chieftec SFX-500GD-C 500W;6000;Характеристики блока питания Chieftec SFX-500GD-C 500W;
+6;31;Seasonic FOCUS Plus Gold 550W;8400;Характеристики блока питания Seasonic FOCUS Plus Gold 550W;
+6;32;Seasonic FOCUS Plus Platinum 550W;10200;Характеристики блока питания Seasonic FOCUS Plus Platinum 550W;
+6;33;Corsair RMx 850W [CP-9020180-EU];11000;Характеристики блока питания Corsair RMx 850W [CP-9020180-EU];
+6;34;Straight Power 11 1000W [BN285];13750;Характеристики блока питания Straight Power 11 1000W [BN285];
+6;35;High Power Astro Lite 750W [AL-750GD];5900;Характеристики блока питания High Power Astro Lite 750W [AL-750GD];
