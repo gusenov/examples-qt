@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Приложение для дачи</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QComboBox" name="comboBoxType">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>305</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBoxPlant">
+    <property name="geometry">
+     <rect>
+      <x>325</x>
+      <y>10</y>
+      <width>305</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxTime">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>42</y>
+      <width>191</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Сроки</string>
+    </property>
+    <widget class="QLabel" name="labelSeeds">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>15</y>
+       <width>161</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Посадка семян</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelGround">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>62</y>
+       <width>161</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Высадка в грунт</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelTerms">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>109</y>
+       <width>161</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Сроки созревания</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelSeedsValue">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>36</y>
+       <width>161</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelGroundValue">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>83</y>
+       <width>161</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelTermsValue">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>130</y>
+       <width>161</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxNeighborhood">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>42</y>
+      <width>421</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Соседство</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QGroupBox" name="groupBoxGreen">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>15</y>
+       <width>391</width>
+       <height>178</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>В теплице</string>
+     </property>
+     <widget class="QGroupBox" name="groupBoxGreenGood">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>20</y>
+        <width>173</width>
+        <height>148</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Благоприятное</string>
+      </property>
+      <widget class="QListWidget" name="listWidgetGreenGood">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>20</y>
+         <width>143</width>
+         <height>118</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBoxGreenBad">
+      <property name="geometry">
+       <rect>
+        <x>203</x>
+        <y>20</y>
+        <width>173</width>
+        <height>148</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Неблагоприятное</string>
+      </property>
+      <widget class="QListWidget" name="listWidgetGreenBad">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>20</y>
+         <width>143</width>
+         <height>118</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBoxOpen">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>208</y>
+       <width>391</width>
+       <height>178</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>В открытом грунте</string>
+     </property>
+     <widget class="QGroupBox" name="groupBoxOpenGood">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>20</y>
+        <width>173</width>
+        <height>148</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Благоприятное</string>
+      </property>
+      <widget class="QListWidget" name="listWidgetOpenGood">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>20</y>
+         <width>143</width>
+         <height>118</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBoxOpenBad">
+      <property name="geometry">
+       <rect>
+        <x>203</x>
+        <y>20</y>
+        <width>173</width>
+        <height>148</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Неблагоприятное</string>
+      </property>
+      <widget class="QListWidget" name="listWidgetOpenBad">
+       <property name="geometry">
+        <rect>
+         <x>15</x>
+         <y>20</y>
+         <width>143</width>
+         <height>118</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxTop">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>213</y>
+      <width>191</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Лучшие сорта</string>
+    </property>
+    <widget class="QListWidget" name="listWidgetTop">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>20</y>
+       <width>161</width>
+       <height>201</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

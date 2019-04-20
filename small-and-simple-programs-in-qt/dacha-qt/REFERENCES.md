@@ -1,0 +1,12 @@
+- [Using a text file as resource of the project | Qt Forum](https://forum.qt.io/topic/72994/using-a-text-file-as-resource-of-the-project/4)
+- [JSON Support in Qt | Qt Core 5.12.2](https://doc.qt.io/qt-5/json.html)
+- [[SOLVED]parse Json in Qt5 | Qt Forum](https://forum.qt.io/topic/59691/solved-parse-json-in-qt5/4)
+- [Qt parsing JSON using QJsonDocument, QJsonObject, QJsonArray - Stack Overflow](https://stackoverflow.com/questions/19822211/qt-parsing-json-using-qjsondocument-qjsonobject-qjsonarray)
+- [Traversing QVariantMap](https://www.qtcentre.org/threads/53193-Traversing-QVariantMap)
+- [python - How to setModel for QListWidget - Stack Overflow](https://stackoverflow.com/questions/25876487/how-to-setmodel-for-qlistwidget)
+- [c++ - Getting strings from QVariantList - Stack Overflow](https://stackoverflow.com/questions/13555358/getting-strings-from-qvariantlist)
+
+- [c++ - What does the explicit keyword mean? - Stack Overflow](https://stackoverflow.com/questions/121162/what-does-the-explicit-keyword-mean)
+- [Sample function for parsing a QXmlStreamReader (or part thereof) to a QVariant tree.](https://gist.github.com/pcolby/6558910)
+- [c++ - qt implicit instantiation of undefined template 'QList<VPNConnection>' - Stack Overflow](https://stackoverflow.com/questions/40251501/qt-implicit-instantiation-of-undefined-template-qlistvpnconnection)
+- [How can i check if QMainWindow is fully loaded ? | Qt Forum](https://forum.qt.io/topic/6386/how-can-i-check-if-qmainwindow-is-fully-loaded/12)

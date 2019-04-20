@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/data">
+        <file>data.json</file>
+    </qresource>
+    <qresource prefix="/icon">
+        <file>tea-plant-leaf-icon.png</file>
+    </qresource>
+</RCC>
