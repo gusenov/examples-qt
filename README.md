@@ -1,3 +1,5 @@
+- [Руководство по установке Qt 5.12.2 на Windows 7](small-and-simple-programs-in-qt/qt-install)
+
 - [Оконное приложение, управляющее простейшей базой данных сотрудников](employees/)
 - [Выживаемость популяции при заданных условиях](small-and-simple-programs-in-qt/peoples-survival-qt)
 - [Сборка ПК из предложенных вариантов из CSV-файла](small-and-simple-programs-in-qt/computer-assembly-qt)
