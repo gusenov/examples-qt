@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/app/icon">
+        <file>Ruble-RUB-icon.png</file>
+    </qresource>
+</RCC>
