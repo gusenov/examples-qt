@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/images/png">
+        <file>Image-Comics-v2-icon.png</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file>Double-J-Design-Ravenna-3d-Folder-Open.ico</file>
+        <file>Fatcow-Farm-Fresh-Door-open.ico</file>
+        <file>Gakuseisean-Ivista-2-Alarm-Arrow-Left.ico</file>
+        <file>Gakuseisean-Ivista-2-Alarm-Arrow-Right.ico</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,3 @@
+# Screenshot
+
+![Пример](screenshot.png)
