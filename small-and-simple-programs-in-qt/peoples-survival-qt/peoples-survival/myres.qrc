@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/MyHtmlRes">
+        <file>levels_description.html</file>
+    </qresource>
+    <qresource prefix="/MyImgRes">
+        <file>people-icon-256.png</file>
+    </qresource>
+</RCC>
