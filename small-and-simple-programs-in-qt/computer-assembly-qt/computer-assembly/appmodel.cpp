@@ -169,7 +169,7 @@ int AppModel::getPriceByIndex(DeviceType type, int index)
 }
 
 // Получить информацию о совместимости для выбранного оборудования:
-QString AppModel::getCompatibilityInfo(int videoCardNo, int motherboardNo, int hddNo, int cpuNo, int powerSupplyNo, int ramNo)
+QString AppModel::getCompatibilityInfo(int videoCardNo, int motherboardNo, int hddNo[2], int cpuNo, int powerSupplyNo, int ramNo)
 {
     Q_UNUSED(hddNo);
     Q_UNUSED(powerSupplyNo);
@@ -178,7 +178,10 @@ QString AppModel::getCompatibilityInfo(int videoCardNo, int motherboardNo, int h
 
     const VideoCard& videoCard = videoCardList.at(videoCardNo);
     const Motherboard& motherboard = motherboardList.at(motherboardNo);
-    // const HDD& hdd = hddList.at(hddNo);
+
+    // const HDD& hdd1 = hddList.at(hddNo[0]);
+    // const HDD& hdd2 = hddList.at(hddNo[1]);
+
     const CPU& cpu = cpuList.at(cpuNo);
     // const PowerSupply& powerSupply = powerSupplyList.at(powerSupplyNo);
     const RAM& ram = ramList.at(ramNo);

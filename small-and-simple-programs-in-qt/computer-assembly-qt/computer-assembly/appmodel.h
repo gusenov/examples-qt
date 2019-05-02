@@ -49,7 +49,7 @@ public:
     int getPriceByIndex(DeviceType type, int index);
 
     // Получить информацию о совместимости для выбранного оборудования:
-    QString getCompatibilityInfo(int videoCardNo, int motherboardNo, int hddNo, int cpuNo, int powerSupplyNo, int ramNo);
+    QString getCompatibilityInfo(int videoCardNo, int motherboardNo, int hddNo[2], int cpuNo, int powerSupplyNo, int ramNo);
 
 // Приватные члены класса:
 private:
