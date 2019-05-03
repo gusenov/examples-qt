@@ -4,6 +4,8 @@
 #include <QPixmap>
 #include <QPrinter>
 #include <QPrintDialog>
+#include <QDebug>
+#include <QScrollBar>
 
 // Конструктор:
 Print::Print(QWidget *parent) :
@@ -11,19 +13,36 @@ Print::Print(QWidget *parent) :
     ui(new Ui::Print)
 {
     ui->setupUi(this);
+
+    ui->scrollArea->setWidgetResizable(false);
+    ui->scrollArea->setVisible(false);
+
+    // Создание виджета для показа изображения:
+    imageLabel = new QLabel();
+    imageLabel->setBackgroundRole(QPalette::Base);
+    imageLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
+    imageLabel->setScaledContents(true);
+    ui->scrollArea->setWidget(imageLabel);
+
+    ui->scrollArea->setStyleSheet("QScrollArea {background-color:white;}");
+    ui->scrollArea->horizontalScrollBar()->hide();
 }
 
 // Деструктор:
 Print::~Print()
 {
     delete ui;
+
+    if (imageLabel != nullptr) delete imageLabel;
 }
 
 // Установить результирующий текст:
 void Print::setResultText(QString& resultText)
 {
-    int w = ui->labelResult->width();  // ширина холста.
-    int h = ui->labelResult->height();  // высота хоста.
+    ui->scrollArea->setVisible(true);
+
+    int w = ui->scrollArea->width() - ui->scrollArea->verticalScrollBar()->width();  // ширина холста.
+    int h = resultText.length() / 2;  // высота хоста.
     QSize sz(w, h);  // размеры холста.
 
     QPixmap pix(sz);  // холст.
@@ -34,7 +53,8 @@ void Print::setResultText(QString& resultText)
     // Рисуем текст:
     painter.drawText(10, 10, w, h, Qt::AlignLeft | Qt::AlignTop, resultText);
 
-    ui->labelResult->setPixmap(pix);
+    imageLabel->setPixmap(pix);
+    imageLabel->adjustSize();
 }
 
 // Обработчик нажатия на кнопку Закрыть:
@@ -58,7 +78,7 @@ void Print::on_pushButtonPrint_clicked()
     painter.begin(&printer);
 
     // Печать холста:
-    painter.drawPixmap(0, 0, *(ui->labelResult->pixmap()));
+    painter.drawPixmap(0, 0, *(imageLabel->pixmap()));
 
     painter.end();
 }

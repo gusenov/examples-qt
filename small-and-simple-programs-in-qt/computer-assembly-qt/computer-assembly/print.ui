@@ -13,19 +13,6 @@
   <property name="windowTitle">
    <string>Список что выбрано, характеристики, количество и готовая итоговая цена</string>
   </property>
-  <widget class="QLabel" name="labelResult">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>620</width>
-     <height>427</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButtonClose">
    <property name="geometry">
     <rect>
@@ -51,6 +38,29 @@
    <property name="text">
     <string>Печать…</string>
    </property>
+  </widget>
+  <widget class="QScrollArea" name="scrollArea">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>620</width>
+     <height>427</height>
+    </rect>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>618</width>
+      <height>425</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

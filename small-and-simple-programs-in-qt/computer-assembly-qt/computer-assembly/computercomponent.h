@@ -24,19 +24,19 @@ public:
     );
 
     // Получить тип компонента:
-    DeviceType getType();
+    DeviceType getType() const;
 
     // Получить идентификатор:
-    int getId();
+    int getId() const;
 
     // Получить наименование:
-    QString getName();
+    QString getName() const;
 
     // Получить цену:
-    int getPrice();
+    int getPrice() const;
 
     // Получить характеристики:
-    QString getSpecifications();
+    QString getSpecifications() const;
 
     // Получить идентификаторы совместимых компонентов:
     QList<int> getCompatibility();

@@ -20,31 +20,31 @@ ComputerComponent::ComputerComponent(
 }
 
 // Получить тип компонента:
-DeviceType ComputerComponent::getType()
+DeviceType ComputerComponent::getType() const
 {
     return type;
 }
 
 // Получить идентификатор:
-int ComputerComponent::getId()
+int ComputerComponent::getId() const
 {
     return id;
 }
 
 // Получить наименование:
-QString ComputerComponent::getName()
+QString ComputerComponent::getName() const
 {
     return name;
 }
 
 // Получить цену:
-int ComputerComponent::getPrice()
+int ComputerComponent::getPrice() const
 {
     return price;
 }
 
 // Получить характеристики:
-QString ComputerComponent::getSpecifications()
+QString ComputerComponent::getSpecifications() const
 {
     return specifications;
 }

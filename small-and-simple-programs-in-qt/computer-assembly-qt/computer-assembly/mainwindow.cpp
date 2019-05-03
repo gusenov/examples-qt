@@ -43,10 +43,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     checkCompatibility();  // проверка совместимости выбранных компонентов.
 
-    // Панель вкладок жестких дисков:
-    ui->tabWidgetHDD->setTabText(0, "№ 1");
-    ui->tabWidgetHDD->setTabText(1, "№ 2");
-
+    connect(ui->widgetSelectVideoCard, SIGNAL(checkCompatibilitySignal()), this, SLOT(checkCompatibility()));
+    connect(ui->widgetSelectHDD, SIGNAL(checkCompatibilitySignal()), this, SLOT(checkCompatibility()));
 }
 
 // Настройка моделей данных для выпадающих списков:
@@ -59,14 +57,13 @@ void MainWindow::setupModels()
     // Создаем и устанавливаем модели данных для выпадающих списков:
 
     modelVideoCard = new QStringListModel(appDataModel->getVideoCardStringList());
-    ui->comboBoxVideoCardChoice->setModel(modelVideoCard);
+    ui->widgetSelectVideoCard->config(modelVideoCard, appDataModel, DeviceType::VideoCard);
 
     modelMotherboard = new QStringListModel(appDataModel->getMotherboardStringList());
     ui->comboBoxMotherboardChoice->setModel(modelMotherboard);
 
     modelHDD = new QStringListModel(appDataModel->getHddStringList());
-    ui->comboBoxHDDChoice->setModel(modelHDD);
-    ui->comboBoxHDDChoice_2->setModel(modelHDD);
+    ui->widgetSelectHDD->config(modelHDD, appDataModel, DeviceType::HDD);
 
     modelCPU = new QStringListModel(appDataModel->getCpuStringList());
     ui->comboBoxCPUChoice->setModel(modelCPU);
@@ -128,22 +125,6 @@ void MainWindow::on_actionAbout_triggered()
     about->show();  // показать окно.
 }
 
-
-// Обработчик события смены видеокарты:
-void MainWindow::on_comboBoxVideoCardChoice_currentIndexChanged(int index)
-{
-    // Показать характеристики выбранного компонента:
-    ui->plainTextEditVideoCardSpecifications->setPlainText(
-        appDataModel->getSpecificationsByIndex(DeviceType::VideoCard, index)
-    );
-
-    // Пересчитать цену в завимисости от количества:
-    on_spinBoxVideoCardQuantityValue_valueChanged(ui->spinBoxVideoCardQuantityValue->value());    
-
-    // Проверить совместимость:
-    checkCompatibility();
-}
-
 // Обработчик события смены материнской платы:
 void MainWindow::on_comboBoxMotherboardChoice_currentIndexChanged(int index)
 {
@@ -156,36 +137,6 @@ void MainWindow::on_comboBoxMotherboardChoice_currentIndexChanged(int index)
     ui->labelMotherboardPriceValue->setText(
         QString::number(appDataModel->getPriceByIndex(DeviceType::Motherboard, index)) + " ₽"
     );
-
-    // Проверить совместимость:
-    checkCompatibility();
-}
-
-// Обработчики события смены жесткого диска:
-
-void MainWindow::on_comboBoxHDDChoice_currentIndexChanged(int index)
-{
-    // Показать характеристики выбранного компонента:
-    ui->plainTextEditHDDSpecifications->setPlainText(
-        appDataModel->getSpecificationsByIndex(DeviceType::HDD, index)
-    );
-
-    // Пересчитать цену в завимисости от количества:
-    on_spinBoxHDDQuantityValue_valueChanged(ui->spinBoxHDDQuantityValue->value());
-
-    // Проверить совместимость:
-    checkCompatibility();
-}
-
-void MainWindow::on_comboBoxHDDChoice_2_currentIndexChanged(int index)
-{
-    // Показать характеристики выбранного компонента:
-    ui->plainTextEditHDDSpecifications_2->setPlainText(
-        appDataModel->getSpecificationsByIndex(DeviceType::HDD, index)
-    );
-
-    // Пересчитать цену в завимисости от количества:
-    on_spinBoxHDDQuantityValue_2_valueChanged(ui->spinBoxHDDQuantityValue_2->value());
 
     // Проверить совместимость:
     checkCompatibility();
@@ -243,48 +194,6 @@ void MainWindow::on_comboBoxRAMChoice_currentIndexChanged(int index)
     checkCompatibility();
 }
 
-
-// Обработчик события смены количества видеокарт:
-void MainWindow::on_spinBoxVideoCardQuantityValue_valueChanged(int arg1)
-{
-    int currentVideoCardIndex = ui->comboBoxVideoCardChoice->currentIndex();
-
-    // Пересчитать цену в завимисости от количества:
-    priceVideoCard = appDataModel->getPriceByIndex(DeviceType::VideoCard, currentVideoCardIndex) * arg1;
-
-    ui->labelVideoCardPriceValue->setText(
-        QString::number(priceVideoCard) + " ₽"
-    );
-}
-
-// Обработчики события смены количества жестких дисков:
-
-void MainWindow::on_spinBoxHDDQuantityValue_valueChanged(int arg1)
-{
-    int currentHDDIndex = ui->comboBoxHDDChoice->currentIndex();
-    if (currentHDDIndex == -1)
-        return;
-
-    // Пересчитать цену в завимисости от количества:
-    priceHDD = appDataModel->getPriceByIndex(DeviceType::HDD, currentHDDIndex) * arg1;
-    ui->labelHDDPriceValue->setText(
-        QString::number(priceHDD) + " ₽"
-    );
-}
-
-void MainWindow::on_spinBoxHDDQuantityValue_2_valueChanged(int arg1)
-{
-    int currentHDDIndex = ui->comboBoxHDDChoice_2->currentIndex();
-    if (currentHDDIndex == -1)
-        return;
-
-    // Пересчитать цену в завимисости от количества:
-    priceHDD2 = appDataModel->getPriceByIndex(DeviceType::HDD, currentHDDIndex) * arg1;
-    ui->labelHDDPriceValue_2->setText(
-        QString::number(priceHDD2) + " ₽"
-    );
-}
-
 // Обработчик события смены количества оперативной памяти:
 void MainWindow::on_spinBoxRAMQuantityValue_valueChanged(int arg1)
 {
@@ -305,7 +214,7 @@ int MainWindow::getTotalPrice()
 {
     return priceVideoCard
          + priceMotherboard
-         + priceHDD + priceHDD2
+         + ui->widgetSelectHDD->getPrice()
          + priceCPU
          + pricePowerSupply
          + priceRAM;
@@ -317,34 +226,21 @@ void MainWindow::on_pushButtonBuild_clicked()
 {
     // Форматируем текст по шаблону:
 
-    QString result = QString("%1 x%2 = %3\n%4\n\n"
-                             "%5 = %6\n%7\n\n"
-                             "%8 x%9 = %10\n%11\n\n"
-                             "%12 x%13 = %14\n%15\n\n"
-                             "%16 = %17\n%18\n\n"
-                             "%19 = %20\n%21\n\n"
-                             "%22 x%23 = %24\n%25\n\n\n"
-                             "ИТОГО: %26 ₽").arg(
-        ui->comboBoxVideoCardChoice->currentText(),
-        QString::number(ui->spinBoxVideoCardQuantityValue->value()),
-        ui->labelVideoCardPriceValue->text(),
-        ui->plainTextEditVideoCardSpecifications->toPlainText(),
+    QString result = QString("%1"
+                             "%2 = %3\n%4\n\n"
+                             "%5"
+                             "%6 = %7\n%8\n\n"
+                             "%9 = %10\n%11\n\n"
+                             "%12 x%13 = %14\n%15\n\n\n"
+                             "ИТОГО: %16 ₽").arg(
+        ui->widgetSelectVideoCard->getText(),
 
         ui->comboBoxMotherboardChoice->currentText(),
         ui->labelMotherboardPriceValue->text(),
         ui->plainTextEditMotherboardSpecifications->toPlainText(),
 
-        ui->comboBoxHDDChoice->currentText(),
-        QString::number(ui->spinBoxHDDQuantityValue->value())
+        ui->widgetSelectHDD->getText()
     ).arg(
-        ui->labelHDDPriceValue->text(),
-        ui->plainTextEditHDDSpecifications->toPlainText(),
-
-        ui->comboBoxHDDChoice_2->currentText(),
-        QString::number(ui->spinBoxHDDQuantityValue_2->value()),
-        ui->labelHDDPriceValue_2->text(),
-        ui->plainTextEditHDDSpecifications_2->toPlainText(),
-
         ui->comboBoxCPUChoice->currentText(),
 
         ui->labelCPUPriceValue->text(),
@@ -433,16 +329,11 @@ void MainWindow::checkCompatibility()
     if (!isInitialized)
         return;
 
-    int hdds[2] = {
-        ui->comboBoxHDDChoice->currentIndex(),
-        ui->comboBoxHDDChoice_2->currentIndex()
-    };
-
     // Получаем текстовую информацию о результатах совместимости:
     QString compatibilityInfo = appDataModel->getCompatibilityInfo(
-        ui->comboBoxVideoCardChoice->currentIndex(),
+        ui->widgetSelectVideoCard->getDeviceIndexes(),
         ui->comboBoxMotherboardChoice->currentIndex(),
-        hdds,
+        ui->widgetSelectHDD->getDeviceIndexes(),
         ui->comboBoxCPUChoice->currentIndex(),
         ui->comboBoxPowerSupplyChoice->currentIndex(),
         ui->comboBoxRAMChoice->currentIndex()

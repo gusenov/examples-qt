@@ -41,15 +41,8 @@ private slots:
     void on_actionAbout_triggered();
 
 
-    // Обработчик события смены видеокарты:
-    void on_comboBoxVideoCardChoice_currentIndexChanged(int index);
-
     // Обработчик события смены материнской платы:
     void on_comboBoxMotherboardChoice_currentIndexChanged(int index);
-
-    // Обработчик события смены жесткого диска:
-    void on_comboBoxHDDChoice_currentIndexChanged(int index);
-    void on_comboBoxHDDChoice_2_currentIndexChanged(int index);
 
     // Обработчик события смены процессора:
     void on_comboBoxCPUChoice_currentIndexChanged(int index);
@@ -59,14 +52,6 @@ private slots:
 
     // Обработчик события смены оперативной памяти:
     void on_comboBoxRAMChoice_currentIndexChanged(int index);
-
-
-    // Обработчик события смены количества видеокарт:
-    void on_spinBoxVideoCardQuantityValue_valueChanged(int arg1);
-
-    // Обработчик события смены количества жестких дисков:
-    void on_spinBoxHDDQuantityValue_valueChanged(int arg1);
-    void on_spinBoxHDDQuantityValue_2_valueChanged(int arg1);
 
     // Обработчик события смены количества оперативной памяти:
     void on_spinBoxRAMQuantityValue_valueChanged(int arg1);
@@ -79,6 +64,11 @@ private slots:
     // Обработчик события выбора пункта главного меню Справка → Информация о проекте:
     void on_actionInfo_triggered();
 
+
+    // Метод для проверки совместимости выбранных устройств:
+    void checkCompatibility();
+
+
 // Приватные члены класса:
 
 private:
@@ -88,9 +78,6 @@ private:
 
     // Метод для получения итоговой цены:
     int getTotalPrice();
-
-    // Метод для проверки совместимости выбранных устройств:
-    void checkCompatibility();
 
 
     // Указатель на форму:
@@ -130,7 +117,6 @@ private:
 
     int priceVideoCard = 0;  // цена по видеокартам.
     int priceMotherboard = 0;  // цена материнской платы.
-    int priceHDD = 0, priceHDD2 = 0;  // цена по жестким дискам.
     int priceCPU = 0;  // цена процессора.
     int pricePowerSupply = 0;  // цена блока питания.
     int priceRAM = 0;  // цена по оперативной памяти.

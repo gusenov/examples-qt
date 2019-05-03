@@ -37,7 +37,9 @@ SOURCES += \
     ram.cpp \
     csvdata.cpp \
     appmodel.cpp \
-    print.cpp
+    print.cpp \
+    multiple.cpp \
+    tabform.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -52,12 +54,16 @@ HEADERS += \
     csvdata.h \
     devicetypes.h \
     appmodel.h \
-    print.h
+    print.h \
+    multiple.h \
+    tabform.h
 
 FORMS += \
         mainwindow.ui \
     about.ui \
-    print.ui
+    print.ui \
+    multiple.ui \
+    tabform.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

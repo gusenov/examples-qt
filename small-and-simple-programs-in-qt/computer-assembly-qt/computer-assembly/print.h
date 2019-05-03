@@ -2,6 +2,7 @@
 #define PRINT_H
 
 #include <QWidget>
+#include <QLabel>
 
 // Пространство имён Ui:
 namespace Ui {
@@ -48,6 +49,8 @@ private:
 
     // Результирующий текст:
     QString resultText;
+
+    QLabel *imageLabel = nullptr;
 
 };
 

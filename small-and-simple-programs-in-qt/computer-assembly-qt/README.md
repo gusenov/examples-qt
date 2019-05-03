@@ -6,3 +6,5 @@
 
 ![Два жестких диска](screenshots/hdd-2.png)
 
+![Вкладки](screenshots/with-tabs.png)
+

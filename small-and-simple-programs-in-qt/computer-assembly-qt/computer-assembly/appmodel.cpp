@@ -169,14 +169,13 @@ int AppModel::getPriceByIndex(DeviceType type, int index)
 }
 
 // Получить информацию о совместимости для выбранного оборудования:
-QString AppModel::getCompatibilityInfo(int videoCardNo, int motherboardNo, int hddNo[2], int cpuNo, int powerSupplyNo, int ramNo)
+QString AppModel::getCompatibilityInfo(QList<int> videoCardNoLst, int motherboardNo, QList<int> hddNo, int cpuNo, int powerSupplyNo, int ramNo)
 {
     Q_UNUSED(hddNo);
     Q_UNUSED(powerSupplyNo);
 
     QString result = "";
 
-    const VideoCard& videoCard = videoCardList.at(videoCardNo);
     const Motherboard& motherboard = motherboardList.at(motherboardNo);
 
     // const HDD& hdd1 = hddList.at(hddNo[0]);
@@ -186,12 +185,16 @@ QString AppModel::getCompatibilityInfo(int videoCardNo, int motherboardNo, int h
     // const PowerSupply& powerSupply = powerSupplyList.at(powerSupplyNo);
     const RAM& ram = ramList.at(ramNo);
 
-    switch (videoCard.isCompatible(motherboard)) {
-    case -1: result += "Видеокарта не совместима с материнской платой!"; break;
-    case 0:  result += "Нет информации о соместимости видеокарты с материнской платой."; break;
-    case 1:  result += "Видеокарта cовместима с материнской платой."; break;
+    foreach (int videoCardNo, videoCardNoLst) {
+        const VideoCard& videoCard = videoCardList.at(videoCardNo);
+        const QString videoCardName = videoCard.getName();
+        switch (videoCard.isCompatible(motherboard)) {
+        case -1: result += QString("Видеокарта %1 не совместима с материнской платой!").arg(videoCardName); break;
+        case 0:  result += QString("Нет информации о соместимости видеокарты %1 с материнской платой.").arg(videoCardName); break;
+        case 1:  result += QString("Видеокарта %1 cовместима с материнской платой.").arg(videoCardName); break;
+        }
+        result += "\n";
     }
-    result += "\n";
 
     switch (cpu.isCompatible(motherboard)) {
     case -1: result += "Процессор не совместим с материнской платой!"; break;
