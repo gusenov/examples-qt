@@ -134,8 +134,10 @@ void MainWindow::on_comboBoxMotherboardChoice_currentIndexChanged(int index)
     );
 
     // Пересчитать цену в завимисости от количества:
+    priceMotherboard = appDataModel->getPriceByIndex(DeviceType::Motherboard, index);
+
     ui->labelMotherboardPriceValue->setText(
-        QString::number(appDataModel->getPriceByIndex(DeviceType::Motherboard, index)) + " ₽"
+        QString::number(priceMotherboard) + " ₽"
     );
 
     // Проверить совместимость:
@@ -152,6 +154,7 @@ void MainWindow::on_comboBoxCPUChoice_currentIndexChanged(int index)
 
     // Пересчитать цену в завимисости от количества:
     priceCPU = appDataModel->getPriceByIndex(DeviceType::CPU, index);
+//    qDebug() << priceCPU;
     ui->labelCPUPriceValue->setText(
         QString::number(priceCPU) + " ₽"
     );
@@ -212,7 +215,14 @@ void MainWindow::on_spinBoxRAMQuantityValue_valueChanged(int arg1)
 // Метод для получения итоговой цены:
 int MainWindow::getTotalPrice()
 {
-    return priceVideoCard
+//    qDebug() << "Видеокарты = " << ui->widgetSelectVideoCard->getPrice();
+//    qDebug() << "Мат. плата = " << priceMotherboard;
+//    qDebug() << "Диски = " << ui->widgetSelectHDD->getPrice();
+//    qDebug() << "ЦП = " << priceCPU;
+//    qDebug() << "Питание = " << pricePowerSupply;
+//    qDebug() << "ОЗУ = " << priceRAM;
+
+    return ui->widgetSelectVideoCard->getPrice()
          + priceMotherboard
          + ui->widgetSelectHDD->getPrice()
          + priceCPU
