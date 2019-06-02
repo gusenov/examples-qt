@@ -1,9 +1,11 @@
 #include "comboboxitemdelegate.h"
-#include <QComboBox>
 #include <QDebug>
 #include <QEvent>
 #include <QMouseEvent>
 #include <QAbstractItemView>
+#include <QTableView>
+#include <QCoreApplication>
+#include <QAbstractItemDelegate>
 
 // Конструктор:
 ComboBoxItemDelegate::ComboBoxItemDelegate(QObject *parent)
@@ -14,13 +16,17 @@ ComboBoxItemDelegate::ComboBoxItemDelegate(QObject *parent)
 // Метод создания выпадающего списка для выбора месяца:
 QWidget *ComboBoxItemDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
+//    qDebug() << "createEditor";
+
     // Неиспользуемые параметры:
     Q_UNUSED(option);
-    Q_UNUSED(index);
+//    Q_UNUSED(index);
+
+    idx = index;
 
     // Создание и заполнение выпадающего списка:
 
-    QComboBox *cb = new QComboBox(parent);
+    cb = new QComboBox(parent);
 
     cb->addItem("Январь");
     cb->addItem("Февраль");
@@ -35,12 +41,37 @@ QWidget *ComboBoxItemDelegate::createEditor(QWidget *parent, const QStyleOptionV
     cb->addItem("Ноябрь");
     cb->addItem("Декабрь");
 
+    QObject::connect(cb, SIGNAL(currentIndexChanged(int)), this, SLOT(currentIndexChanged(int)));
+    QObject::connect(cb, SIGNAL(currentIndexChanged(const QString&)), this, SLOT(currentIndexChanged(const QString&)));
+
     return cb;
+}
+
+void ComboBoxItemDelegate::currentIndexChanged(int index)
+{
+    Q_UNUSED(index);
+
+    QTableView *tblView =  static_cast<QTableView *>(parent());
+
+    setModelData(cb, tblView->model(), idx);
+
+    emit closeEditor(cb, NoHint);
+//    tblView->itemDelegate()->closeEditor(cb);
+
+//    qDebug() << index;
+}
+
+void ComboBoxItemDelegate::currentIndexChanged(const QString &text)
+{
+    Q_UNUSED(text);
+//    qDebug() << text;
 }
 
 // Метод для установки текущего значения в выпадающем списке:
 void ComboBoxItemDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
+//    qDebug() << "setEditorData";
+
     // Получаем выпадающий список:
     QComboBox *cb = qobject_cast<QComboBox *>(editor);
     Q_ASSERT(cb);  // убеждаемся, что он не пустой.
@@ -61,9 +92,14 @@ void ComboBoxItemDelegate::setEditorData(QWidget *editor, const QModelIndex &ind
 // Метод для запоминания выбранного в выпадающем списке значения:
 void ComboBoxItemDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
 {
+//    qDebug() << "setModelData";
+
     // Получаем выпадающий список:
     QComboBox *cb = qobject_cast<QComboBox *>(editor);
     Q_ASSERT(cb);  // убеждаемся, что он не пустой.
+
+//    qDebug() << index;
+//    qDebug() << cb->currentText();
 
     // Сохраняем данные из выпадающиего списка в модели:
     model->setData(index, cb->currentText(), Qt::EditRole);

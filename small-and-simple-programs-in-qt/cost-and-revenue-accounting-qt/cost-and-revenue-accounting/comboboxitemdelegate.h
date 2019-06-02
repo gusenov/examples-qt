@@ -2,6 +2,7 @@
 #define COMBOBOXITEMDELEGATE_H
 
 #include <QStyledItemDelegate>
+#include <QComboBox>
 
 // Класс для выбора месяца в таблице:
 class ComboBoxItemDelegate : public QStyledItemDelegate  // унаследован от класса QStyledItemDelegate.
@@ -29,6 +30,16 @@ public:
 
     // Обработчик событий в выпадающем списке:
     bool editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index);
+
+private slots:
+
+    void currentIndexChanged(int index);
+    void currentIndexChanged(const QString &text);
+
+private:
+
+    mutable QComboBox *cb;
+    mutable QModelIndex idx;
 
 };
 

@@ -44,4 +44,18 @@
 - [How to parse nested JSON Array and Object inside array](https://www.qtcentre.org/threads/64598-How-to-parse-nested-JSON-Array-and-Object-inside-array)
 - [How to reset model in Qt? - Stack Overflow](https://stackoverflow.com/questions/14756645/how-to-reset-model-in-qt)
 
+- [QDateEdit in QTableWidget](https://www.qtcentre.org/threads/47642-QDateEdit-in-QTableWidget)
+- [QComboBox Class | Qt Widgets 5.12.3](https://doc.qt.io/qt-5/qcombobox.html)
+- [c++ - Is it possible to disconnect all of a QObject's connections without deleting it - Stack Overflow](https://stackoverflow.com/questions/32124715/is-it-possible-to-disconnect-all-of-a-qobjects-connections-without-deleting-it)
+
+- [qt4 - What's the "editing finished" signal of a QTableView item? - Stack Overflow](https://stackoverflow.com/questions/16272872/whats-the-editing-finished-signal-of-a-qtableview-item)
+
+- [c++ - Regular cast vs. static_cast vs. dynamic_cast - Stack Overflow](https://stackoverflow.com/questions/28002/regular-cast-vs-static-cast-vs-dynamic-cast)
+- [qt - How do I get the current editor from a QTableView? - Stack Overflow](https://stackoverflow.com/questions/14562600/how-do-i-get-the-current-editor-from-a-qtableview)
+- [C++ mutable keyword - GeeksforGeeks](https://www.geeksforgeeks.org/c-mutable-keyword/)
+- [qt - Creating a QModelIndex - Stack Overflow](https://stackoverflow.com/questions/42487645/creating-a-qmodelindex)
+- [qt4 - in Qt, How do I make a window be the current window? - Stack Overflow](https://stackoverflow.com/questions/2240717/in-qt-how-do-i-make-a-window-be-the-current-window)
+- [qt4 - How can I simulate user interaction (key press event) in Qt? - Stack Overflow](https://stackoverflow.com/questions/2035310/how-can-i-simulate-user-interaction-key-press-event-in-qt)
+- [qt - How to close QComboBox editor in delegate when user chooses item - Stack Overflow](https://stackoverflow.com/questions/25604999/how-to-close-qcombobox-editor-in-delegate-when-user-chooses-item)
+- [QAbstractItemDelegate Class | Qt Widgets 5.12.3](https://doc.qt.io/qt-5/qabstractitemdelegate.html#signals)
 
