@@ -70,3 +70,9 @@
   - Замена сигналов свойствами.
   - Дефиниция извне (в месте его использования) QML-элемента обработчика on\<PropertyName\>Changed его свойства.
 
+
+- Layouts
+  - GridLayout
+    - [2 колонки и 3 строки](layouts/grid/grid-layout-2cols-3rows)
+
+
