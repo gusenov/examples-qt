@@ -16,7 +16,7 @@
   - Вызов из QML-овского JavaScript-кода методов C++ объектов.
   - Установка С++ объекта QStringListModel в QML-элемент ListView.
   - Определение слотов в C++ коде.
-  
+
 
 - [Соединение QМL-сигналов со слотами С++](connect-qml-signals-with-cpp-slots)
   - Добавление в QML к элементам своих сигналов и их выпуск изнутри QML-элементов.
@@ -76,3 +76,6 @@
     - [2 колонки и 3 строки](layouts/grid/grid-layout-2cols-3rows)
     - [Прямоугольник поверх grid-a](layouts/grid/rect-over-grid-layout)
 
+# Кнопки
+
+- [Кнопка с фоновой картинкой и обработкой событий мыши](btn/btn-with-img)
