@@ -7,6 +7,7 @@
 # Qt
 
 - [Диалоговые окна для открытия или сохранения файлов](file-dialog-qt-app-cmake)
+- [Сохранение и чтение настроек с помощью QSettings](qt-app-with-settings-cmake)
 
 ## Программки
 
