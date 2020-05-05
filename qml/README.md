@@ -77,6 +77,8 @@
     - [Прямоугольник поверх grid-a](layouts/grid/rect-over-grid-layout)
     - [Форма с полями на основе GridLayout](layouts/grid/grid-with-fields)
     - [ColumnLayout с вложенным GridLayout](layouts/grid/grid-layout-inside-column-layout)
+  - Misc
+    - [Раскладка для простого input dialog для ввода записи](layouts/misc-examples/create-new-record-input-dialog)
 
 # Кнопки
 
