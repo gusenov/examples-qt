@@ -76,6 +76,7 @@
     - [2 колонки и 3 строки](layouts/grid/grid-layout-2cols-3rows)
     - [Прямоугольник поверх grid-a](layouts/grid/rect-over-grid-layout)
     - [Форма с полями на основе GridLayout](layouts/grid/grid-with-fields)
+    - [ColumnLayout с вложенным GridLayout](layouts/grid/grid-layout-inside-column-layout)
 
 # Кнопки
 
