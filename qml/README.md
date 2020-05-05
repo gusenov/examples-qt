@@ -80,6 +80,10 @@
   - Misc
     - [Раскладка для простого input dialog для ввода записи](layouts/misc-examples/create-new-record-input-dialog)
 
+# Элементы
+
+- [Обращение из вложенного элемента к свойству родительского элемента](el/external-control-scope)
+
 # Кнопки
 
 - [Кнопка с фоновой картинкой и обработкой событий мыши](btn/btn-with-img)
