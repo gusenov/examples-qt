@@ -47,3 +47,10 @@
 ### Grid
 
 - [Табличное размещение четырех элементов](grid-el)
+
+### GridLayout
+
+- [2 колонки и 3 строки](../grid/grid-layout-2cols-3rows)
+- [Прямоугольник поверх grid-a](../grid/rect-over-grid-layout)
+- [Форма с полями на основе GridLayout](../grid/grid-with-fields)
+- [ColumnLayout с вложенным GridLayout](../grid/grid-layout-inside-column-layout)
