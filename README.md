@@ -9,6 +9,10 @@
 - [Диалоговые окна для открытия или сохранения файлов](file-dialog-qt-app-cmake)
 - [Сохранение и чтение настроек с помощью QSettings](qt-app-with-settings-cmake)
 
+# QML
+
+- [Пример использования QML Live (Qt Quick live reloading system)](qml/qml-live)
+
 ## Программки
 
 - [Оконное приложение, управляющее простейшей базой данных сотрудников](employees/)
