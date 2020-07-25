@@ -54,3 +54,9 @@
 - [Прямоугольник поверх grid-a](../grid/rect-over-grid-layout)
 - [Форма с полями на основе GridLayout](../grid/grid-with-fields)
 - [ColumnLayout с вложенным GridLayout](../grid/grid-layout-inside-column-layout)
+
+### StackLayout
+
+### Flow
+
+- [Размещение в виде потока](flow-el)
