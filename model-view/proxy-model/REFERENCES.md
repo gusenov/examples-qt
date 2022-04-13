@@ -1,0 +1,2 @@
+- [Widgets Tutorial - Nested Layouts | Qt Widgets 5.15.0](https://doc.qt.io/qt-5/qtwidgets-tutorials-widgets-nestedlayouts-example.html)
+- [How to Use QPushButton/ru - Qt Wiki](https://wiki.qt.io/How_to_Use_QPushButton/ru)
