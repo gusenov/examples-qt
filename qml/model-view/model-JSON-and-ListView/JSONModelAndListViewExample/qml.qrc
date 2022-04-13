@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>CDs.js</file>
+        <file>covers/Amaranthe.webp</file>
+        <file>covers/WithoutYou.jpg</file>
+        <file>covers/TheUnforgiving.jpg</file>
+    </qresource>
+</RCC>
