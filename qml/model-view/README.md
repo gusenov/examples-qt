@@ -27,7 +27,8 @@
 
 # Примеры
 
-- [Модель списка (+ разъяснения про Component)](model-JSON-and-ListView)
+- [JSON-модель списка и ListView (+ разъяснения про Component)](model-JSON-and-ListView)
 - [XML-модель](model-XML)
 - [Возврат из C++ модели списка значений для QML ComboBox](model-for-combo-box)
 - [Вложенный Repeater](nested-repeater)
+- [C++ QAbstractListModel и QML ListView с делегатом для отображения элементов модели (+ в QML есть получение элемента из модели по индексу)](contact-lst)
