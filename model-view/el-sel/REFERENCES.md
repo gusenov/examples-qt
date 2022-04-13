@@ -1,0 +1,7 @@
+- [QItemSelectionModel Class | Qt Core 5.14.1](https://doc.qt.io/qt-5/qitemselectionmodel.html)
+- [QItemSelectionModel signals are not emitted | Qt Forum](https://forum.qt.io/topic/92965/qitemselectionmodel-signals-are-not-emitted)
+- [qt - QItemSelectionModel currentChange signal is emitted on application start? - Stack Overflow](https://stackoverflow.com/questions/24587922/qitemselectionmodel-currentchange-signal-is-emitted-on-application-start)
+- [qt - QTableView selectionChanged - Stack Overflow](https://stackoverflow.com/questions/2376052/qtableview-selectionchanged)
+- [c++ - fail to use Q_OBJECT Macro in CMake Project - Stack Overflow](https://stackoverflow.com/questions/47471629/fail-to-use-q-object-macro-in-cmake-project)
+- [c++ - CMake splits the generated files between build and src directory - Stack Overflow](https://stackoverflow.com/questions/33486410/cmake-splits-the-generated-files-between-build-and-src-directory)
+- [How to inherit from QObject directly? | Qt Forum](https://forum.qt.io/topic/27051/how-to-inherit-from-qobject-directly)
