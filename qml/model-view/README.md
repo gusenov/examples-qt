@@ -27,6 +27,7 @@
 
 # Примеры
 
+- [QML модель списка ListModel](model-list)
 - [JSON-модель списка и ListView (+ разъяснения про Component)](model-JSON-and-ListView)
 - [XML-модель](model-XML)
 - [Возврат из C++ модели списка значений для QML ComboBox](model-for-combo-box)
