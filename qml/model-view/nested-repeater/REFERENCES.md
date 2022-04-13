@@ -1,0 +1,2 @@
+- [qt - Access ListView model within the Repeater component in the delegate - Stack Overflow](https://stackoverflow.com/questions/41981991/access-listview-model-within-the-repeater-component-in-the-delegate)
+- [Qml nested row/repeater in a column/repeater - Stack Overflow](https://stackoverflow.com/questions/24210179/qml-nested-row-repeater-in-a-column-repeater)
