@@ -28,4 +28,4 @@
 # Примеры
 
 - [Модель списка (+ разъяснения про Component)](model-JSON-and-ListView)
-
+- [XML-модель](model-XML)

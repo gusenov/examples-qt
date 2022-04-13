@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<CDs>
+    <CD>
+        <artist>Amaranthe</artist>
+        <album>Amaranthe</album>
+        <year>2011</year>
+        <cover>qrc:/covers/Amaranthe.jpg</cover>
+    </CD>
+    <CD>
+        <artist>Dark Princess</artist>
+        <album>Without You</album>
+        <year>2005</year>
+        <cover>qrc:/covers/WithoutYou.jpg</cover>
+    </CD>
+    <CD>
+        <artist>Within Temptation</artist>
+        <album>The Unforgiving</album>
+        <year>2011</year>
+        <cover>qrc:/covers/TheUnforgiving.jpg</cover>
+    </CD>
+</CDs>
